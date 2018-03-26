@@ -15,11 +15,16 @@ $(function(){
     function showList() {
       $('#groceryList').hide();
       groceryItems.forEach(function(groceryItem){
-        $('ul').append('<li>' + groceryItem + '</li>');
+        $('ul').append('<li>' + groceryItem.toUpperCase() + '</li>');
       });
     }
 
+    function alphabetize() {
+      return groceryItems.sort();
+    }
+
     createShoppingList();
+    alphabetize();
     showList();
     event.preventDefault();
   });
