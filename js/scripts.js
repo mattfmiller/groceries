@@ -19,12 +19,12 @@ $(function(){
       });
     }
 
-    function alphabetize() {
-      return groceryItems.sort();
+    function alphabetize(array) {
+      return array.sort();
     }
 
     createShoppingList();
-    alphabetize();
+    alphabetize(groceryItems);
     showList();
     event.preventDefault();
   });
